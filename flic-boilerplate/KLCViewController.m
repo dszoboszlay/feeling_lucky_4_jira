@@ -11,15 +11,15 @@
 //
 //  IMPORTANT!
 //  Before you can scan your Flic, you have to add its id to the allow list.
-//  In [viewDidLoad] you can add the ID of your button. You can find the ID
-//  on the back side of the Flic.
+//  In [viewDidLoad] you can add the id of your button. You can find the ID
+//  on the back of the Flic.
 //
-//  This example project contains some basic functionality to get you started
+//  This example project contains some basic functionality to get you started.
 //  Once you have your Flic connected, you will start to recieve events.
 //  The first thing you want to do is probably to add some logic to this method:
 //  - (void)flicButton:(SCLFlicButton *)button didReceiveButtonClick:(BOOL)queued age:(NSInteger)age;
 //
-//  Detailed documentation can be found at: http://developers.flic.io/
+//  Detailed documentation can be found at: https://developers.flic.io/documentation	
 //
 //  Good luck and have fun!
 
@@ -42,7 +42,7 @@
 	
 	// this is to limit the scanning to buttons that are somewhat close to you
 	// 0 is closest -100 is farthest
-	// once the button is found, this will not affect range at all
+	// once the button is connected, this will not affect range at all
 	AppDelegate.flicManager.minAllowedRSSI = @(-40);
 }
 

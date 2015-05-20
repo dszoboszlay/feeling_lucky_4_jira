@@ -217,6 +217,11 @@
 	[view addSubview:mainText];
 	[view addSubview:topRightButton];
 	
+	UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0.0, 61.0, self.view.frame.size.width, 1.0)];
+	line.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+	
+	[view addSubview:line];
+	
 	return view;
 }
 
@@ -330,6 +335,7 @@
 															}];
 	
 	self.pane = SCLScannerPopOverViewControllerPaneScanning;
+	
 }
 
 - (void)paneTapped:(UITapGestureRecognizer *)gestureRecognizer;
