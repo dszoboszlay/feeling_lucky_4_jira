@@ -12,7 +12,7 @@
 		751131011B09D31B0086E779 /* fliclib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751131001B09D31B0086E779 /* fliclib.framework */; };
 		751131021B09D31B0086E779 /* fliclib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 751131001B09D31B0086E779 /* fliclib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		751131151B09EB050086E779 /* KLCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 751131121B09EB050086E779 /* KLCAppDelegate.m */; };
-		751131161B09EB050086E779 /* KLCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 751131141B09EB050086E779 /* KLCViewController.m */; };
+		751131161B09EB050086E779 /* KLCViewControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 751131141B09EB050086E779 /* KLCViewControllerBase.m */; };
 		7511311B1B09EB630086E779 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 751131191B09EB630086E779 /* LaunchScreen.xib */; };
 		7511311C1B09EB630086E779 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7511311A1B09EB630086E779 /* Main.storyboard */; };
 		754823B61B09FAF700F46B75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 754823B41B09FAF700F46B75 /* main.m */; };
@@ -21,6 +21,8 @@
 		754823CA1B0A05E600F46B75 /* FLCPopOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754823C71B0A05E600F46B75 /* FLCPopOverViewController.m */; };
 		754823CB1B0A05E600F46B75 /* SCLScannerPopOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754823C91B0A05E600F46B75 /* SCLScannerPopOverViewController.m */; };
 		754ADBFF1B0C95A00091C90A /* FlicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 754ADBFE1B0C95A00091C90A /* FlicTableViewCell.m */; };
+		754ADC021B0CD2F10091C90A /* KLCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754ADC011B0CD2F10091C90A /* KLCViewController.m */; };
+		754ADC051B0CD7A10091C90A /* SKBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 754ADC041B0CD7A10091C90A /* SKBounceAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +58,8 @@
 		751131001B09D31B0086E779 /* fliclib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = fliclib.framework; path = libs/fliclib.framework; sourceTree = "<group>"; };
 		751131111B09EB050086E779 /* KLCAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCAppDelegate.h; sourceTree = "<group>"; };
 		751131121B09EB050086E779 /* KLCAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCAppDelegate.m; sourceTree = "<group>"; };
-		751131131B09EB050086E779 /* KLCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCViewController.h; sourceTree = "<group>"; };
-		751131141B09EB050086E779 /* KLCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCViewController.m; sourceTree = "<group>"; };
+		751131131B09EB050086E779 /* KLCViewControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCViewControllerBase.h; sourceTree = "<group>"; };
+		751131141B09EB050086E779 /* KLCViewControllerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCViewControllerBase.m; sourceTree = "<group>"; };
 		751131191B09EB630086E779 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		7511311A1B09EB630086E779 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		754823B21B09FAF700F46B75 /* flic-boilerplate.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "flic-boilerplate.pch"; sourceTree = "<group>"; };
@@ -72,7 +74,10 @@
 		754823C91B0A05E600F46B75 /* SCLScannerPopOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLScannerPopOverViewController.m; sourceTree = "<group>"; };
 		754ADBFD1B0C95A00091C90A /* FlicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlicTableViewCell.h; sourceTree = "<group>"; };
 		754ADBFE1B0C95A00091C90A /* FlicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlicTableViewCell.m; sourceTree = "<group>"; };
-		7574421F1B0B8C9B00E39F5A /* flic-boilerplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "flic-boilerplate.entitlements"; sourceTree = "<group>"; };
+		754ADC001B0CD2F10091C90A /* KLCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCViewController.h; sourceTree = "<group>"; };
+		754ADC011B0CD2F10091C90A /* KLCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCViewController.m; sourceTree = "<group>"; };
+		754ADC031B0CD7A10091C90A /* SKBounceAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKBounceAnimation.h; sourceTree = "<group>"; };
+		754ADC041B0CD7A10091C90A /* SKBounceAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKBounceAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +121,8 @@
 		751130D21B09C14D0086E779 /* flic-boilerplate */ = {
 			isa = PBXGroup;
 			children = (
-				7574421F1B0B8C9B00E39F5A /* flic-boilerplate.entitlements */,
+				754ADC001B0CD2F10091C90A /* KLCViewController.h */,
+				754ADC011B0CD2F10091C90A /* KLCViewController.m */,
 				754823B11B09FAEB00F46B75 /* other */,
 				751131171B09EB0E0086E779 /* ui */,
 				751131101B09EACB0086E779 /* classes */,
@@ -154,18 +160,20 @@
 		751131101B09EACB0086E779 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				754ADC031B0CD7A10091C90A /* SKBounceAnimation.h */,
+				754ADC041B0CD7A10091C90A /* SKBounceAnimation.m */,
 				754823C61B0A05E600F46B75 /* FLCPopOverViewController.h */,
 				754823C71B0A05E600F46B75 /* FLCPopOverViewController.m */,
+				754ADBFD1B0C95A00091C90A /* FlicTableViewCell.h */,
+				754ADBFE1B0C95A00091C90A /* FlicTableViewCell.m */,
 				751131111B09EB050086E779 /* KLCAppDelegate.h */,
 				751131121B09EB050086E779 /* KLCAppDelegate.m */,
-				751131131B09EB050086E779 /* KLCViewController.h */,
-				751131141B09EB050086E779 /* KLCViewController.m */,
+				751131131B09EB050086E779 /* KLCViewControllerBase.h */,
+				751131141B09EB050086E779 /* KLCViewControllerBase.m */,
 				754823BA1B09FE9500F46B75 /* SCLButtonScanner.h */,
 				754823BB1B09FE9500F46B75 /* SCLButtonScanner.m */,
 				754823C81B0A05E600F46B75 /* SCLScannerPopOverViewController.h */,
 				754823C91B0A05E600F46B75 /* SCLScannerPopOverViewController.m */,
-				754ADBFD1B0C95A00091C90A /* FlicTableViewCell.h */,
-				754ADBFE1B0C95A00091C90A /* FlicTableViewCell.m */,
 			);
 			path = classes;
 			sourceTree = "<group>";
@@ -300,13 +308,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				751131161B09EB050086E779 /* KLCViewController.m in Sources */,
+				751131161B09EB050086E779 /* KLCViewControllerBase.m in Sources */,
 				754823CA1B0A05E600F46B75 /* FLCPopOverViewController.m in Sources */,
+				754ADC051B0CD7A10091C90A /* SKBounceAnimation.m in Sources */,
 				754ADBFF1B0C95A00091C90A /* FlicTableViewCell.m in Sources */,
 				754823BC1B09FE9500F46B75 /* SCLButtonScanner.m in Sources */,
 				754823B61B09FAF700F46B75 /* main.m in Sources */,
 				754823CB1B0A05E600F46B75 /* SCLScannerPopOverViewController.m in Sources */,
 				751131151B09EB050086E779 /* KLCAppDelegate.m in Sources */,
+				754ADC021B0CD2F10091C90A /* KLCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

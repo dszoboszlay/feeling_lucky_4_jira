@@ -23,6 +23,8 @@ typedef NS_ENUM(NSInteger, SCLButtonScannerErrorCode)
 @property (nonatomic, strong) SCLFlicButton *button;
 @property (nonatomic) BOOL connecting;
 @property (nonatomic) BOOL scanning;
+
+@property (nonatomic, copy) BOOL (^isInterestedInButton)(SCLFlicButton *flicButton);
 @property (nonatomic, copy) void (^stateChangeHandler)();
 @property (nonatomic, copy) void (^verifyButton)(SCLFlicButton *flicButton, void(^verified)(NSError *error));
 @property (nonatomic, copy) void (^completionHandler)(SCLFlicButton *flicButton, NSError *error);
@@ -32,6 +34,6 @@ typedef NS_ENUM(NSInteger, SCLButtonScannerErrorCode)
 - (instancetype)initWithFlicManager:(SCLFlicManager *)flicManager;
 - (void)startScanning:(NSTimeInterval)timeInterval;
 - (void)stopScan;
-- (void)abort;
+- (void)clear;
 
 @end

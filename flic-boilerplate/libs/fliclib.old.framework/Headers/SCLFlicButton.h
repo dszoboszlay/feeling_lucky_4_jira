@@ -99,33 +99,104 @@ typedef NS_ENUM(NSInteger, SCLFlicButtonModeOptions) {
 };
 
 /*!
- *  @enum SCLFlicButtonLEDIndicateCount
+ *  @enum SCLFlicButtonLEDIntensity
  *
- *  @discussion Represents the indication count, meaning how many times the LED will fade when using the <code>indicateLED:</code> method.
- *              Please be mindful of battery usage.
+ *  @discussion Represents the different LED intensity options available on the flic.
+ *              It is strongly recommended that you keep battery consumption in mind when choosing intensity.
  *
  */
-typedef NS_ENUM(NSInteger, SCLFlicButtonLEDIndicateCount) {
+typedef NS_ENUM(NSInteger, SCLFlicButtonLEDIntensity) {
     /**
-     * The LED will fade 1 time.
+     * LED intensity low.
      */
-    SCLFlicButtonLEDIndicateCount1 = 1,
+    SCLFlicButtonLEDIntensityLow = 0,
     /**
-     * The LED will fade 2 times.
+     * LED intensity medium.
      */
-    SCLFlicButtonLEDIndicateCount2,
+    SCLFlicButtonLEDIntensityMedium,
     /**
-     * The LED will fade 3 times.
+     * LED intensity high.
      */
-    SCLFlicButtonLEDIndicateCount3,
+    SCLFlicButtonLEDIntensityHigh,
+    /* Temporary */
+    SCLFlicButtonLEDIntensityFade,
+};
+
+/*!
+ *  @enum SCLFlicButtonLEDType
+ *
+ *  @discussion Represents the different LED type options available on the flic.
+ *
+ */
+typedef NS_ENUM(NSInteger, SCLFlicButtonLEDType) {
     /**
-     * The LED will fade 4 times.
+     * LED will be turned on with a constant light.
      */
-    SCLFlicButtonLEDIndicateCount4,
+    SCLFlicButtonLEDTypeConstant = 0,
     /**
-     * The LED will fade 5 times.
+     * LED will be turned on with a blinking light
      */
-    SCLFlicButtonLEDIndicateCount5,
+    SCLFlicButtonLEDTypeBlink,
+};
+
+
+/*!
+ *  @enum SCLFlicButtonLEDSpeed
+ *
+ *  @discussion Represents the different LED speeds available when using a led pattern as the LED type.
+ *              Notice, this will not have any affect if you are using a constant LED type.
+ *
+ */
+typedef NS_ENUM(NSInteger, SCLFlicButtonLEDSpeed) {
+    /**
+     * LED intensity medium.
+     */
+    SCLFlicButtonLEDSpeedSlow = 0,
+    /**
+     * LED intensity high.
+     */
+    SCLFlicButtonLEDSpeedFast,
+};
+
+/*!
+ *  @enum SCLFlicButtonLEDDuration
+ *
+ *  @discussion Represents the different LED intensity options available on the flic.
+ *
+ */
+typedef NS_ENUM(NSInteger, SCLFlicButtonLEDDuration) {
+    /**
+     * LED will stay on until you actively turn it off. This setting is not recommended since it can have a drastic effect on battery consumption.
+     */
+    SCLFlicButtonLEDDurationInf = 0,
+    /**
+     * LED will perform the chosen action for 1 second and then turn itself off.
+     */
+    SCLFlicButtonLEDDuration1,
+    /**
+     * LED will perform the chosen action for 5 seconds and then turn itself off.
+     */
+    SCLFlicButtonLEDDuration5,
+    /**
+     * LED will perform the chosen action for 10 seconds and then turn itself off.
+     */
+    SCLFlicButtonLEDDuration10,
+    /**
+     * LED will perform the chosen action for 20 seconds and then turn itself off.
+     */
+    SCLFlicButtonLEDDuration20,
+    /**
+     * LED will perform the chosen action for 30 seconds and then turn itself off.
+     */
+    SCLFlicButtonLEDDuration30,
+    /**
+     * LED will perform the chosen action for 45 seconds and then turn itself off.
+     */
+    SCLFlicButtonLEDDuration45,
+    /**
+     * LED will perform the chosen action for 60 seconds and then turn itself off.
+     */
+    SCLFlicButtonLEDDuration60,
 };
 
 /*!
@@ -343,13 +414,26 @@ typedef NS_ENUM(NSInteger, SCLFlicError) {
 - (void) disconnect;
 
 /*!
- *  @method indicateLED:
+ *  @method setLEDwithIntestity:type:speed:duration:andPriority:prio
  *
- *  @discussion     Use this method when you want to indicate something to the user by fading the LED. Be mindful with battery usage.
+ *  @param intensity    The intensity of the LED light.
+ *  @param type         The type of light.
+ *  @param speed        The speed of the LED action (Will have no affect when using a constant LED type).
+ *  @param duration     How long the LED action should be.
  *
- *  @param count    Decides how many times the LED will indicate (fade)
+ *  @discussion         Turn on the flic with a color and pattern.
+ *
  */
-- (void) indicateLED: (SCLFlicButtonLEDIndicateCount) count;
+- (void) setLEDwithIntestity:(SCLFlicButtonLEDIntensity)intensity type:(SCLFlicButtonLEDType)type
+                       speed:(SCLFlicButtonLEDSpeed)speed duration:(SCLFlicButtonLEDDuration)duration andPriority:(int) prio;
+
+/*!
+ *  @method turnOffLED:
+ *
+ *  @discussion         Turn off the LED.
+ *
+ */
+- (void) turnOffLED;
 
 /*!
  *  @method setMode:withOptions:

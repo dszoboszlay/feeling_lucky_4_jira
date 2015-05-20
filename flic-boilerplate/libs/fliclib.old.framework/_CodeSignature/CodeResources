@@ -4,13 +4,17 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>.DS_Store</key>
+		<data>
+		Tfl0R29bPYfEJGm3wDLkCMkrVA0=
+		</data>
 		<key>Headers/SCLFlicButton.h</key>
 		<data>
-		d8ZEwsYoGDR1GmSPLyuBqwlPIj8=
+		S+uJvYFtGVwevcLGxA2wjrUMnzo=
 		</data>
 		<key>Headers/SCLFlicManager.h</key>
 		<data>
-		FaLDX66cBk9wOcXT7c5aD6fEC1E=
+		ags/dsKQ2dOT4idaFMZO8FDByFE=
 		</data>
 		<key>Headers/fliclib.h</key>
 		<data>
@@ -18,7 +22,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		9VsfF+G09+A6mevVgwDp4t7nV7U=
+		pCj8Iqno+s0WEaUPyt+3Y/c+nM4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -29,11 +33,11 @@
 	<dict>
 		<key>Headers/SCLFlicButton.h</key>
 		<data>
-		d8ZEwsYoGDR1GmSPLyuBqwlPIj8=
+		S+uJvYFtGVwevcLGxA2wjrUMnzo=
 		</data>
 		<key>Headers/SCLFlicManager.h</key>
 		<data>
-		FaLDX66cBk9wOcXT7c5aD6fEC1E=
+		ags/dsKQ2dOT4idaFMZO8FDByFE=
 		</data>
 		<key>Headers/fliclib.h</key>
 		<data>

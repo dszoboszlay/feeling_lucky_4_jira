@@ -122,9 +122,6 @@
 {
 	NSLog(@"flicButtonDidConnect:%@", button);
 	
-	[button setMode:SCLFlicButtonModeActiveKeepAlive withOptions:nil];
-	button.triggerBehavior = SCLFlicButtonTriggerBehaviorClickAndDoubleClickAndHold;
-
 	if([self.buttonDelegate respondsToSelector:@selector(flicButtonDidConnect:)])
 	{
 		[self.buttonDelegate flicButtonDidConnect:button];

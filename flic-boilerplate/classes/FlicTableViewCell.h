@@ -13,4 +13,6 @@
 @property (nonatomic, strong) IBOutlet UILabel *title;
 @property (nonatomic, strong) IBOutlet UIImageView *icon;
 
+- (void)boing;
+
 @end

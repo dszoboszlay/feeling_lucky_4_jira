@@ -28,6 +28,7 @@ typedef enum SCLScannerPopOverViewControllerPane
 @property (nonatomic, strong) SCLButtonScanner *buttonScanner;
 @property (nonatomic) SCLScannerPopOverViewControllerPane pane;
 @property (nonatomic, copy) void (^verifyButton)(SCLFlicButton *flicButton, void(^verified)(NSError *error));
+@property (nonatomic, copy) NSArray *allowedButtons;
 
 - (instancetype)initWithFlicManager:(SCLFlicManager *)flicManager scanInterval:(NSTimeInterval)scanInterval;
 

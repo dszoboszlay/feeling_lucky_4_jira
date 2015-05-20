@@ -45,7 +45,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oIM-wY-xnx" id="SZU-iq-bRw">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Flic name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVX-t1-Cbg">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flic name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVX-t1-Cbg">
                                                     <rect key="frame" x="49" y="11" width="503" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="izZ-ez-jIA"/>
@@ -74,7 +74,7 @@
                                                 <constraint firstItem="YIU-3d-XaA" firstAttribute="top" secondItem="bxW-Zw-j7x" secondAttribute="bottom" constant="5" id="BRl-Nf-EOU"/>
                                                 <constraint firstItem="jVX-t1-Cbg" firstAttribute="top" secondItem="SZU-iq-bRw" secondAttribute="topMargin" constant="3" id="EzL-jR-e2h"/>
                                                 <constraint firstItem="bxW-Zw-j7x" firstAttribute="leading" secondItem="SZU-iq-bRw" secondAttribute="leading" constant="8" id="ReW-Oy-aej"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="jVX-t1-Cbg" secondAttribute="trailing" constant="40" id="Rpa-Qb-KFj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="jVX-t1-Cbg" secondAttribute="trailing" constant="8" id="Rpa-Qb-KFj"/>
                                                 <constraint firstAttribute="trailing" secondItem="YIU-3d-XaA" secondAttribute="trailing" id="Rug-t1-dc0"/>
                                                 <constraint firstItem="jVX-t1-Cbg" firstAttribute="leading" secondItem="bxW-Zw-j7x" secondAttribute="trailing" constant="9" id="Uw1-zI-5Qd"/>
                                                 <constraint firstItem="YIU-3d-XaA" firstAttribute="leading" secondItem="SZU-iq-bRw" secondAttribute="leading" id="zfZ-nl-96H"/>
@@ -92,13 +92,6 @@
                                     <outlet property="delegate" destination="GSe-gC-egh" id="YqF-Rb-ds0"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_flic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Ag9-sj-OVU">
-                                <rect key="frame" x="195" y="95" width="211" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="211" id="RdO-Wa-ypK"/>
-                                    <constraint firstAttribute="height" constant="100" id="jg6-4Z-qhJ"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3T-Ws-GGt">
                                 <rect key="frame" x="256" y="537" width="88" height="45"/>
                                 <color key="backgroundColor" red="1" green="0.19215686269999999" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -112,19 +105,32 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="scan:" destination="GSe-gC-egh" eventType="touchUpInside" id="BmN-pz-GEn"/>
+                                    <action selector="search:" destination="GSe-gC-egh" eventType="touchUpInside" id="U9D-PM-Alb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G66-pB-ngT">
+                                <rect key="frame" x="195" y="95" width="211" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="211" id="Yn9-TC-dcF"/>
+                                    <constraint firstAttribute="height" constant="100" id="bge-qM-ABr"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="main_flic_logo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reloadData" destination="GSe-gC-egh" eventType="touchUpInside" id="M6o-Vk-tHW"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.29411764709999999" green="0.67843137249999996" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Ag9-sj-OVU" firstAttribute="top" secondItem="fS1-Vd-1GR" secondAttribute="bottom" constant="31" id="0rb-X3-T8m"/>
                             <constraint firstAttribute="centerX" secondItem="s3T-Ws-GGt" secondAttribute="centerX" id="4sd-yA-ADk"/>
-                            <constraint firstAttribute="centerX" secondItem="Ag9-sj-OVU" secondAttribute="centerX" id="B6Z-n9-y6z"/>
                             <constraint firstAttribute="bottom" secondItem="TX6-X7-rKf" secondAttribute="bottom" constant="81" id="BRh-Vd-MNl"/>
                             <constraint firstAttribute="trailing" secondItem="TX6-X7-rKf" secondAttribute="trailing" constant="16" id="M89-uZ-WRt"/>
                             <constraint firstItem="s3T-Ws-GGt" firstAttribute="top" secondItem="TX6-X7-rKf" secondAttribute="bottom" constant="18" id="T2c-fT-UIQ"/>
                             <constraint firstItem="TX6-X7-rKf" firstAttribute="leading" secondItem="Apv-eJ-UFB" secondAttribute="leading" constant="16" id="jST-Ao-GpE"/>
+                            <constraint firstAttribute="centerX" secondItem="G66-pB-ngT" secondAttribute="centerX" id="oRv-IS-dqk"/>
+                            <constraint firstItem="G66-pB-ngT" firstAttribute="top" secondItem="fS1-Vd-1GR" secondAttribute="bottom" constant="31" id="oyN-wl-EQ4"/>
                             <constraint firstItem="TX6-X7-rKf" firstAttribute="top" secondItem="fS1-Vd-1GR" secondAttribute="bottom" constant="87" id="sBM-fr-zW2"/>
                         </constraints>
                     </view>

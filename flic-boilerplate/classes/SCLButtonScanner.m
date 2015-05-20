@@ -15,6 +15,7 @@ NSString * const SCLButtonScannerErrorDomain = @"FLCButtonScannerErrorDomain";
 @interface SCLButtonScanner ()
 
 @property (nonatomic, strong) NSMutableArray *pendingButtons;
+@property (nonatomic, strong) NSMutableArray *failedButtons;
 @property (nonatomic, strong) SCLFlicManager *flicManager;
 @property (nonatomic, strong) NSMutableArray *errors;
 
@@ -32,6 +33,7 @@ NSString * const SCLButtonScannerErrorDomain = @"FLCButtonScannerErrorDomain";
 	if(self)
 	{
 		_pendingButtons = [NSMutableArray new];
+		_failedButtons = [NSMutableArray new];
 		_errors = [NSMutableArray new];
 		_flicManager = flicManager;
 	}
@@ -74,6 +76,7 @@ NSString * const SCLButtonScannerErrorDomain = @"FLCButtonScannerErrorDomain";
 
 - (void)done;
 {
+	[self clear];
 	
 	if(!self.button && self.errors.count == 0)
 	{
@@ -110,11 +113,12 @@ NSString * const SCLButtonScannerErrorDomain = @"FLCButtonScannerErrorDomain";
 	
 	void(^next)(NSError *error) = ^(NSError *error)
 	{
+		[weakSelf removePendingButton:flicButton];
 		if(error)
 		{
 			NSError *internalError = [NSError errorWithDomain:SCLButtonScannerErrorDomain code:SCLButtonScannerErrorCodeCodeVerificationFailed userInfo:@{@"originalError":error}];
 			[weakSelf.errors addObject:internalError];
-			[weakSelf removePendingButton:flicButton];
+			
 			[self.flicManager forgetButton:flicButton];
 			
 			[weakSelf checkState];
@@ -143,6 +147,11 @@ NSString * const SCLButtonScannerErrorDomain = @"FLCButtonScannerErrorDomain";
 
 - (void)flicManager:(SCLFlicManager *)manager didDiscoverButton:(SCLFlicButton *)button withRSSI:(NSNumber *)RSSI;
 {
+	if(self.isInterestedInButton && !self.isInterestedInButton(button))
+	{
+		[self.failedButtons addObject:button];
+		return;
+	}
 	[button connect];
 	[self.pendingButtons addObject:button];
 	
@@ -155,7 +164,8 @@ NSString * const SCLButtonScannerErrorDomain = @"FLCButtonScannerErrorDomain";
 {
 	[self.errors addObject:error];
 	[self removePendingButton:button];
-	[self.flicManager forgetButton:button];
+	[self.failedButtons addObject:button];
+
 	
 	NSLog(@"failed: %@ pending: %i", error, (int)self.pendingButtons.count);
 	[self checkState];
@@ -213,13 +223,25 @@ NSString * const SCLButtonScannerErrorDomain = @"FLCButtonScannerErrorDomain";
 	return sorted.firstObject;
 }
 
-- (void)abort;
+- (IBAction)scan:(id)sender;
+{
+	
+}
+
+- (void)clear;
 {
 	[self stopScan];
 	for(SCLFlicButton *button in self.pendingButtons)
 	{
-		[AppDelegate.flicManager forgetButton:button];
+		[self.flicManager forgetButton:button];
 	}
+	for(SCLFlicButton *button in self.failedButtons)
+	{
+		[self.flicManager forgetButton:button];
+	}
+	[self.failedButtons removeAllObjects];
+	[self.pendingButtons removeAllObjects];
+	
 }
 
 @end

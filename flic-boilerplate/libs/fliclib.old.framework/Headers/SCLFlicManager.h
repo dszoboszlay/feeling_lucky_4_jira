@@ -218,7 +218,6 @@ typedef NS_ENUM(NSInteger, SCLFlicManagerBluetoothState) {
  *  @method flicManager:didChangeBluetoothState:
  *
  *  @param manager      The flic manager providing this information.
- *  @param state        The state that the manager changed to that caused the callback. Notice that there is no guarantee that it has not changed since!
  *
  *  @discussion         If the bluetooth state on the iOS device or the flicManager changes for any reason, then this delegate method will be called
  *                      letting you that something happened. A parameter <code>state</code> will be included, but it is a good practice to always read

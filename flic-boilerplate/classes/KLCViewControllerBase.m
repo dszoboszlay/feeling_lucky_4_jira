@@ -6,41 +6,42 @@
 //  Copyright (c) 2015 Shortcut Labs AB. All rights reserved.
 //
 
-#import "KLCViewController.h"
+#import "KLCViewControllerBase.h"
+#import "FlicTableViewCell.h"
 #import "SCLScannerPopOverViewController.h"
 #import "SCLButtonScanner.h"
-#import "FlicTableViewCell.h"
 
-@interface KLCViewController ()
 
-@property (nonatomic, strong) IBOutlet UITableView *tableView;
+@interface KLCViewControllerBase ()
 
 @end
 
-@implementation KLCViewController
+@implementation KLCViewControllerBase
 
 - (void)viewDidLoad;
 {
 	[super viewDidLoad];
-	// you code here!
+	self.allowedButtons = @[@"ARcA"];
 }
 
-- (IBAction)scan:(id)sender;
+- (void)startScanningWithCompletionHandler:(void (^)(FLCPopOverViewController *popOverViewController, BOOL cancelled, id value , NSError *error))completionHandler;
 {
 	SCLScannerPopOverViewController *scannerVC = [[SCLScannerPopOverViewController alloc] initWithFlicManager:AppDelegate.flicManager scanInterval:5.0];
 	
+	scannerVC.allowedButtons = self.allowedButtons;
+	
 	UIView *view = [[UIApplication sharedApplication] windows][0];
-
+	
 	AppDelegate.buttonDelegate = scannerVC.buttonScanner;
-	[scannerVC showInView:view completionHandler:^(FLCPopOverViewController *popOverViewController, BOOL cancelled, SCLFlicButton *button, NSError *error)
-	{
-		// if the scan was successful, you now have the button and you can also access it in flicManager.knownButtons
-		// if anything went wrong, check the error
-		// don't forget to set AppDelegate.buttonDelegate accordingly to recieve button events
-		[self.tableView reloadData];
-	}];
+	[scannerVC showInView:view completionHandler:completionHandler];
 	
 }
+
+- (IBAction)reloadData;
+{
+	[self.tableView reloadData];
+}
+
 
 # pragma mark UITableViewDataSource
 
@@ -86,6 +87,7 @@
 	}
 	else if(buttonIndex == alertView.firstOtherButtonIndex + 2)
 	{
+		[button disconnect];
 		[AppDelegate.flicManager forgetButton:button];
 		[self.tableView reloadData];
 	}

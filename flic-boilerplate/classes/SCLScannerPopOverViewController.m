@@ -94,6 +94,17 @@
 		}
 	};
 	
+	self.buttonScanner.isInterestedInButton = ^BOOL(SCLFlicButton *button)
+	{
+		if(button.name.length < 4)
+		{
+			return NO;
+		}
+		NSString *buttonShortId = [button.name substringFromIndex:4];
+		
+		return [weakSelf.allowedButtons containsObject:buttonShortId];
+	};
+	
 	UITapGestureRecognizer *paneTapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(paneTapped:)];
 	[self.contentView addGestureRecognizer:paneTapGR];
 	
@@ -241,7 +252,7 @@
 	self.connectedPane = [self createViewWithDictionary:@{
 														  @"title": @"Connected",
 														  @"mainImage": [UIImage imageNamed:@"main_add_flic_mint_connected"],
-														  @"bottomText": @"Tap to set up",
+														  @"bottomText": @"You can now use your Flic!",
 														  @"barBackground": FLC_COLOR_PRIMARY,
 														  @"icon": [UIImage imageNamed:@"main_add_flic_connected_icon"],
 														  @"topRightButton": [UIImage imageNamed:@"main_add_flic_cancel_icon_low"]
@@ -458,7 +469,7 @@
 
 - (void)dismissWithCancelled:(BOOL)cancel;
 {
-	[self.buttonScanner abort];
+	[self.buttonScanner clear];
 	[super dismissWithCancelled:cancel];
 }
 
