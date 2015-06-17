@@ -4,5 +4,12 @@
         {modules, []},
         {registered, []},
         {applications, [kernel, stdlib, crypto, ibrowse, ssl]},
-        {env, []}
+        {env, [ {jira_host,   "localhost"}
+              , {auth_cookie, "SECRET"}
+              , {backlog,     "assignee in (EMPTY) and resolution = Unresolved"}
+              , {start_work,  ["Start Work"]}
+              , {complete,    ["Release"]}
+              , {reject,      ["Reject"]}
+              , {return,      ["Stop Work"]}
+              ]}
     ]}.

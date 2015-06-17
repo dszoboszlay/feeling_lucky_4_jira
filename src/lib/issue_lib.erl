@@ -1,6 +1,9 @@
 -module(issue_lib).
 
 -export([ server/0
+        , cookie/0
+        , backlog/0
+        , transition_names/1
         , from_jira/1
         , to_json/1
         , jira_id/1
@@ -9,23 +12,24 @@
         , transition/2
         ]).
 
--define(skip_transitions, false).
-
 server() ->
-    "jira-dev.internal.machines".
+    application:get_env(feeling_lucky_4_jira, jira_host, "localhost").
 
-transition(_, _) when ?skip_transitions ->
-    ok;
+cookie() ->
+    application:get_env(feeling_lucky_4_jira, auth_cookie, "SECRET").    
+
+backlog() ->
+    DefQuery = "assignee in (EMPTY) and resolution = Unresolved",
+    application:get_env(feeling_lucky_4_jira, backlog, DefQuery).        
+
+transition_names(Transition) ->
+    [unicode:characters_to_binary(Name)
+     || Name <- application:get_env(feeling_lucky_4_jira, Transition, [])
+    ].
+
 transition(Transition, Issue) ->
-    TransitionNames =
-        case Transition of
-            start_work -> [<<"Start Work">>, <<"Start work">>];
-            complete   -> [<<"Release">>, <<"Deliver">>];
-            reject     -> [<<"Reject">>];
-            return     -> [<<"Stop Work">>, <<"Stop work">>]
-        end,
     Id = unicode:characters_to_list(Issue:jira_id()),
-    try jira:transition(server(), Id, TransitionNames) of
+    try jira:transition(server(), cookie(), Id, transition_names(Transition)) of
         ok -> ok
     catch
         _:E ->

@@ -2,28 +2,26 @@
 -module(jira).
 
 %% API
--export([ search/2
-        , transitions/2
-        , transition/3
+-export([ search/3
+        , transitions/3
+        , transition/4
         ]).
-
-%% Constants
--define(cookie, "<put here the actual secret>").
 
 %% =====================================================================
 %% API
 
-search(Server, Query) ->
-    Fields = "summary,description",
-    get(Server, "/search", [{<<"jql">>, Query}, {<<"fields">>, Fields}]).
+search(Server, Cookie, Query) ->
+    Args = [{<<"jql">>, Query}, {<<"fields">>, "summary,description"}],
+    get(Server, Cookie, "/search", Args).
 
-transitions(Server, IssueId) ->
-    get(Server, "/issue/" ++ IssueId ++ "/transitions", []). 
+transitions(Server, Cookie, IssueId) ->
+    Req = "/issue/" ++ IssueId ++ "/transitions",
+    get(Server, Cookie, Req, []). 
 
-transition(Server, IssueId, TransitionNames) ->
+transition(Server, Cookie, IssueId, TransitionNames) ->
     %% Figure out the id of the transition
     Transitions = proplists:get_value(<<"transitions">>,
-                                      transitions(Server, IssueId)),
+                                      transitions(Server, Cookie, IssueId)),
     Ids = [proplists:get_value(<<"id">>, Transition)
            || Transition <- Transitions,
               lists:member(proplists:get_value(<<"name">>, Transition),
@@ -36,7 +34,8 @@ transition(Server, IssueId, TransitionNames) ->
                          [[ {add, [{body, <<"I'm feeling lucky!">>}]}]]}]}
                    , {transition, [{id, Id}]}
                    ],
-            post(Server, "/issue/" ++ IssueId ++ "/transitions", [], Body);
+            Req = "/issue/" ++ IssueId ++ "/transitions",
+            post(Server, Cookie, Req, [], Body);
         [] ->
             throw({no_such_transition, IssueId, TransitionNames})
     end.
@@ -44,18 +43,18 @@ transition(Server, IssueId, TransitionNames) ->
 %% =====================================================================
 %% Internal helper functions
 
-get(Server, Req, Args) ->
-    Json = call(get, Server, Req, Args, []),
+get(Server, Cookie, Req, Args) ->
+    Json = call(get, Server, Cookie, Req, Args, []),
     jsx:decode(Json).
 
-post(Server, Req, Args, Json) ->
-    call(post, Server, Req, Args, jsx:encode(Json)),
+post(Server, Cookie, Req, Args, Json) ->
+    call(post, Server, Cookie, Req, Args, jsx:encode(Json)),
     ok.
 
-call(Method, Server, Req, Args, Body) ->
+call(Method, Server, Cookie, Req, Args, Body) ->
     Url = rest_api_url(Server, Req, Args),
     Headers = [{"Content-Type", "application/json"},
-               {"Cookie", ?cookie}],
+               {"Cookie", Cookie}],
     Options = [{response_format, binary}],
     {ok, "20" ++ _, _RespHeaders, RespBody} =
         ibrowse:send_req(Url, Headers, Method, Body, Options),

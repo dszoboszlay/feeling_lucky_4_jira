@@ -65,7 +65,7 @@ candidate_for_assign() ->
     lists:nth(crypto:rand_uniform(1, length(List) + 1), List).
 
 candidates_for_assign() ->
-    Query = "status = \"Ready for Development\""
-        " AND \"Development Team\" = \"KRED Core cluster\""
-        " AND assignee in (EMPTY)",
-    proplists:get_value(<<"issues">>, jira:search(issue_lib:server(), Query), []).
+    Json = jira:search(issue_lib:server(),
+                       issue_lib:cookie(),
+                       issue_lib:backlog()),
+    proplists:get_value(<<"issues">>, Json, []).
