@@ -1,3 +1,4 @@
+% -*- erlang -*-
 % Routes file.
 
 % Formats: 
@@ -22,4 +23,11 @@
 % 500 Internal Error handler (only invoked in production)
 % {500, [{controller, "world"}, {action, "calamity"}]}.
 
-{"/issue", [{controller, "issue"}, {action, "assign_new"}]}.
+{"/issue",         [{controller, "issue"}, {action, "top"}]}.
+{"/issues",        [{controller, "issue"}, {action, "all"}]}.
+{"/complete",      [{controller, "issue"}, {action, "complete"}]}.
+{"/reject",        [{controller, "issue"}, {action, "reject"}]}.
+{"/return",        [{controller, "issue"}, {action, "return"}]}.
+{"/complete/(.*)", [{controller, "issue"}, {action, "complete"}, {id, '$1'}]}.
+{"/reject/(.*)",   [{controller, "issue"}, {action, "reject"}, {id, '$1'}]}.
+{"/return/(.*)",   [{controller, "issue"}, {action, "return"}, {id, '$1'}]}.
