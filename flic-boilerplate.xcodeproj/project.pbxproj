@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		751130E11B09C14D0086E779 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 751130E01B09C14D0086E779 /* Images.xcassets */; };
+		751130F01B09C14D0086E779 /* flic_boilerplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 751130EF1B09C14D0086E779 /* flic_boilerplateTests.m */; };
+		751131011B09D31B0086E779 /* fliclib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751131001B09D31B0086E779 /* fliclib.framework */; };
+		751131021B09D31B0086E779 /* fliclib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 751131001B09D31B0086E779 /* fliclib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		751131151B09EB050086E779 /* KLCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 751131121B09EB050086E779 /* KLCAppDelegate.m */; };
+		751131161B09EB050086E779 /* KLCViewControllerBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 751131141B09EB050086E779 /* KLCViewControllerBase.m */; };
+		7511311B1B09EB630086E779 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 751131191B09EB630086E779 /* LaunchScreen.xib */; };
+		7511311C1B09EB630086E779 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7511311A1B09EB630086E779 /* Main.storyboard */; };
+		754823B61B09FAF700F46B75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 754823B41B09FAF700F46B75 /* main.m */; };
+		754823B91B09FE2E00F46B75 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 754823B71B09FD9300F46B75 /* Default-568h@2x.png */; };
+		754823BC1B09FE9500F46B75 /* SCLButtonScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 754823BB1B09FE9500F46B75 /* SCLButtonScanner.m */; };
+		754823CA1B0A05E600F46B75 /* FLCPopOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754823C71B0A05E600F46B75 /* FLCPopOverViewController.m */; };
+		754823CB1B0A05E600F46B75 /* SCLScannerPopOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754823C91B0A05E600F46B75 /* SCLScannerPopOverViewController.m */; };
+		754ADBFF1B0C95A00091C90A /* FlicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 754ADBFE1B0C95A00091C90A /* FlicTableViewCell.m */; };
+		754ADC021B0CD2F10091C90A /* KLCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754ADC011B0CD2F10091C90A /* KLCViewController.m */; };
+		754ADC051B0CD7A10091C90A /* SKBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 754ADC041B0CD7A10091C90A /* SKBounceAnimation.m */; };
+		75BC43F21B0E0DDB0031FF9E /* FLCIssuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BC43F11B0E0DDB0031FF9E /* FLCIssuesViewController.m */; };
+		75BC43F51B0E0E1F0031FF9E /* KLCIssueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BC43F41B0E0E1F0031FF9E /* KLCIssueTableViewCell.m */; };
+		75BC43F81B0E12E20031FF9E /* Issue.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BC43F71B0E12E20031FF9E /* Issue.m */; };
+		75D7104E1B0DF41E0059A01B /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D7104C1B0DF41E0059A01B /* UIAlertView+Blocks.m */; };
+		75D710531B0DF43F0059A01B /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D7104F1B0DF43F0059A01B /* UIActionSheet+Blocks.m */; };
+		75D710541B0DF43F0059A01B /* RIButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D710511B0DF43F0059A01B /* RIButtonItem.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		751130EA1B09C14D0086E779 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 751130C81B09C14D0086E779 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 751130CF1B09C14D0086E779;
+			remoteInfo = "flic-boilerplate";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		751131031B09D31B0086E779 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				751131021B09D31B0086E779 /* fliclib.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		751130D01B09C14D0086E779 /* flic-boilerplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "flic-boilerplate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		751130E01B09C14D0086E779 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		751130E91B09C14D0086E779 /* flic-boilerplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "flic-boilerplateTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		751130EE1B09C14D0086E779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		751130EF1B09C14D0086E779 /* flic_boilerplateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = flic_boilerplateTests.m; sourceTree = "<group>"; };
+		751131001B09D31B0086E779 /* fliclib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = fliclib.framework; path = libs/fliclib.framework; sourceTree = "<group>"; };
+		751131111B09EB050086E779 /* KLCAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCAppDelegate.h; sourceTree = "<group>"; };
+		751131121B09EB050086E779 /* KLCAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCAppDelegate.m; sourceTree = "<group>"; };
+		751131131B09EB050086E779 /* KLCViewControllerBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCViewControllerBase.h; sourceTree = "<group>"; };
+		751131141B09EB050086E779 /* KLCViewControllerBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCViewControllerBase.m; sourceTree = "<group>"; };
+		751131191B09EB630086E779 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		7511311A1B09EB630086E779 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		754823B21B09FAF700F46B75 /* flic-boilerplate.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "flic-boilerplate.pch"; sourceTree = "<group>"; };
+		754823B31B09FAF700F46B75 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		754823B41B09FAF700F46B75 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		754823B71B09FD9300F46B75 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		754823BA1B09FE9500F46B75 /* SCLButtonScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLButtonScanner.h; sourceTree = "<group>"; };
+		754823BB1B09FE9500F46B75 /* SCLButtonScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLButtonScanner.m; sourceTree = "<group>"; };
+		754823C61B0A05E600F46B75 /* FLCPopOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCPopOverViewController.h; sourceTree = "<group>"; };
+		754823C71B0A05E600F46B75 /* FLCPopOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCPopOverViewController.m; sourceTree = "<group>"; };
+		754823C81B0A05E600F46B75 /* SCLScannerPopOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLScannerPopOverViewController.h; sourceTree = "<group>"; };
+		754823C91B0A05E600F46B75 /* SCLScannerPopOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCLScannerPopOverViewController.m; sourceTree = "<group>"; };
+		754ADBFD1B0C95A00091C90A /* FlicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlicTableViewCell.h; sourceTree = "<group>"; };
+		754ADBFE1B0C95A00091C90A /* FlicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlicTableViewCell.m; sourceTree = "<group>"; };
+		754ADC001B0CD2F10091C90A /* KLCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCViewController.h; sourceTree = "<group>"; };
+		754ADC011B0CD2F10091C90A /* KLCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCViewController.m; sourceTree = "<group>"; };
+		754ADC031B0CD7A10091C90A /* SKBounceAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKBounceAnimation.h; sourceTree = "<group>"; };
+		754ADC041B0CD7A10091C90A /* SKBounceAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKBounceAnimation.m; sourceTree = "<group>"; };
+		75BC43F01B0E0DDB0031FF9E /* FLCIssuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCIssuesViewController.h; sourceTree = "<group>"; };
+		75BC43F11B0E0DDB0031FF9E /* FLCIssuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCIssuesViewController.m; sourceTree = "<group>"; };
+		75BC43F31B0E0E1F0031FF9E /* KLCIssueTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCIssueTableViewCell.h; sourceTree = "<group>"; };
+		75BC43F41B0E0E1F0031FF9E /* KLCIssueTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCIssueTableViewCell.m; sourceTree = "<group>"; };
+		75BC43F61B0E12E20031FF9E /* Issue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Issue.h; sourceTree = "<group>"; };
+		75BC43F71B0E12E20031FF9E /* Issue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Issue.m; sourceTree = "<group>"; };
+		75D7104C1B0DF41E0059A01B /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		75D7104D1B0DF41E0059A01B /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		75D7104F1B0DF43F0059A01B /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
+		75D710501B0DF43F0059A01B /* UIActionSheet+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks.h"; sourceTree = "<group>"; };
+		75D710511B0DF43F0059A01B /* RIButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIButtonItem.m; sourceTree = "<group>"; };
+		75D710521B0DF43F0059A01B /* RIButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIButtonItem.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		751130CD1B09C14D0086E779 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				751131011B09D31B0086E779 /* fliclib.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		751130E61B09C14D0086E779 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		751130C71B09C14D0086E779 = {
+			isa = PBXGroup;
+			children = (
+				754823B71B09FD9300F46B75 /* Default-568h@2x.png */,
+				751130D21B09C14D0086E779 /* flic-boilerplate */,
+				751130EC1B09C14D0086E779 /* flic-boilerplateTests */,
+				751130D11B09C14D0086E779 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		751130D11B09C14D0086E779 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				751130D01B09C14D0086E779 /* flic-boilerplate.app */,
+				751130E91B09C14D0086E779 /* flic-boilerplateTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		751130D21B09C14D0086E779 /* flic-boilerplate */ = {
+			isa = PBXGroup;
+			children = (
+				754ADC001B0CD2F10091C90A /* KLCViewController.h */,
+				754ADC011B0CD2F10091C90A /* KLCViewController.m */,
+				75BC43F01B0E0DDB0031FF9E /* FLCIssuesViewController.h */,
+				75BC43F11B0E0DDB0031FF9E /* FLCIssuesViewController.m */,
+				75BC43F31B0E0E1F0031FF9E /* KLCIssueTableViewCell.h */,
+				75BC43F41B0E0E1F0031FF9E /* KLCIssueTableViewCell.m */,
+				754823B11B09FAEB00F46B75 /* other */,
+				751131171B09EB0E0086E779 /* ui */,
+				751131101B09EACB0086E779 /* classes */,
+				751130FD1B09D2740086E779 /* libs */,
+				751130E01B09C14D0086E779 /* Images.xcassets */,
+				75BC43F61B0E12E20031FF9E /* Issue.h */,
+				75BC43F71B0E12E20031FF9E /* Issue.m */,
+			);
+			path = "flic-boilerplate";
+			sourceTree = "<group>";
+		};
+		751130EC1B09C14D0086E779 /* flic-boilerplateTests */ = {
+			isa = PBXGroup;
+			children = (
+				751130EF1B09C14D0086E779 /* flic_boilerplateTests.m */,
+				751130ED1B09C14D0086E779 /* Supporting Files */,
+			);
+			path = "flic-boilerplateTests";
+			sourceTree = "<group>";
+		};
+		751130ED1B09C14D0086E779 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				751130EE1B09C14D0086E779 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		751130FD1B09D2740086E779 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				751131001B09D31B0086E779 /* fliclib.framework */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		751131101B09EACB0086E779 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				75D7104F1B0DF43F0059A01B /* UIActionSheet+Blocks.m */,
+				75D710501B0DF43F0059A01B /* UIActionSheet+Blocks.h */,
+				75D710511B0DF43F0059A01B /* RIButtonItem.m */,
+				75D710521B0DF43F0059A01B /* RIButtonItem.h */,
+				75D7104C1B0DF41E0059A01B /* UIAlertView+Blocks.m */,
+				75D7104D1B0DF41E0059A01B /* UIAlertView+Blocks.h */,
+				754ADC031B0CD7A10091C90A /* SKBounceAnimation.h */,
+				754ADC041B0CD7A10091C90A /* SKBounceAnimation.m */,
+				754823C61B0A05E600F46B75 /* FLCPopOverViewController.h */,
+				754823C71B0A05E600F46B75 /* FLCPopOverViewController.m */,
+				754ADBFD1B0C95A00091C90A /* FlicTableViewCell.h */,
+				754ADBFE1B0C95A00091C90A /* FlicTableViewCell.m */,
+				751131111B09EB050086E779 /* KLCAppDelegate.h */,
+				751131121B09EB050086E779 /* KLCAppDelegate.m */,
+				751131131B09EB050086E779 /* KLCViewControllerBase.h */,
+				751131141B09EB050086E779 /* KLCViewControllerBase.m */,
+				754823BA1B09FE9500F46B75 /* SCLButtonScanner.h */,
+				754823BB1B09FE9500F46B75 /* SCLButtonScanner.m */,
+				754823C81B0A05E600F46B75 /* SCLScannerPopOverViewController.h */,
+				754823C91B0A05E600F46B75 /* SCLScannerPopOverViewController.m */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		751131171B09EB0E0086E779 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				751131191B09EB630086E779 /* LaunchScreen.xib */,
+				7511311A1B09EB630086E779 /* Main.storyboard */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		754823B11B09FAEB00F46B75 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				754823B21B09FAF700F46B75 /* flic-boilerplate.pch */,
+				754823B31B09FAF700F46B75 /* Info.plist */,
+				754823B41B09FAF700F46B75 /* main.m */,
+			);
+			path = other;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		751130CF1B09C14D0086E779 /* flic-boilerplate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 751130F31B09C14D0086E779 /* Build configuration list for PBXNativeTarget "flic-boilerplate" */;
+			buildPhases = (
+				751130CC1B09C14D0086E779 /* Sources */,
+				751130CD1B09C14D0086E779 /* Frameworks */,
+				751130CE1B09C14D0086E779 /* Resources */,
+				751131031B09D31B0086E779 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "flic-boilerplate";
+			productName = "flic-boilerplate";
+			productReference = 751130D01B09C14D0086E779 /* flic-boilerplate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		751130E81B09C14D0086E779 /* flic-boilerplateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 751130F61B09C14D0086E779 /* Build configuration list for PBXNativeTarget "flic-boilerplateTests" */;
+			buildPhases = (
+				751130E51B09C14D0086E779 /* Sources */,
+				751130E61B09C14D0086E779 /* Frameworks */,
+				751130E71B09C14D0086E779 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				751130EB1B09C14D0086E779 /* PBXTargetDependency */,
+			);
+			name = "flic-boilerplateTests";
+			productName = "flic-boilerplateTests";
+			productReference = 751130E91B09C14D0086E779 /* flic-boilerplateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		751130C81B09C14D0086E779 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Shortcut Labs AB";
+				TargetAttributes = {
+					751130CF1B09C14D0086E779 = {
+						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = J676M46HZA;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.WAC = {
+								enabled = 0;
+							};
+						};
+					};
+					751130E81B09C14D0086E779 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 751130CF1B09C14D0086E779;
+					};
+				};
+			};
+			buildConfigurationList = 751130CB1B09C14D0086E779 /* Build configuration list for PBXProject "flic-boilerplate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 751130C71B09C14D0086E779;
+			productRefGroup = 751130D11B09C14D0086E779 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				751130CF1B09C14D0086E779 /* flic-boilerplate */,
+				751130E81B09C14D0086E779 /* flic-boilerplateTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		751130CE1B09C14D0086E779 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7511311B1B09EB630086E779 /* LaunchScreen.xib in Resources */,
+				754823B91B09FE2E00F46B75 /* Default-568h@2x.png in Resources */,
+				7511311C1B09EB630086E779 /* Main.storyboard in Resources */,
+				751130E11B09C14D0086E779 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		751130E71B09C14D0086E779 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		751130CC1B09C14D0086E779 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75BC43F51B0E0E1F0031FF9E /* KLCIssueTableViewCell.m in Sources */,
+				751131161B09EB050086E779 /* KLCViewControllerBase.m in Sources */,
+				754823CA1B0A05E600F46B75 /* FLCPopOverViewController.m in Sources */,
+				754ADC051B0CD7A10091C90A /* SKBounceAnimation.m in Sources */,
+				75BC43F21B0E0DDB0031FF9E /* FLCIssuesViewController.m in Sources */,
+				75D710541B0DF43F0059A01B /* RIButtonItem.m in Sources */,
+				754ADBFF1B0C95A00091C90A /* FlicTableViewCell.m in Sources */,
+				754823BC1B09FE9500F46B75 /* SCLButtonScanner.m in Sources */,
+				754823B61B09FAF700F46B75 /* main.m in Sources */,
+				754823CB1B0A05E600F46B75 /* SCLScannerPopOverViewController.m in Sources */,
+				75D710531B0DF43F0059A01B /* UIActionSheet+Blocks.m in Sources */,
+				75D7104E1B0DF41E0059A01B /* UIAlertView+Blocks.m in Sources */,
+				75BC43F81B0E12E20031FF9E /* Issue.m in Sources */,
+				751131151B09EB050086E779 /* KLCAppDelegate.m in Sources */,
+				754ADC021B0CD2F10091C90A /* KLCViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		751130E51B09C14D0086E779 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				751130F01B09C14D0086E779 /* flic_boilerplateTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		751130EB1B09C14D0086E779 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 751130CF1B09C14D0086E779 /* flic-boilerplate */;
+			targetProxy = 751130EA1B09C14D0086E779 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		751130F11B09C14D0086E779 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		751130F21B09C14D0086E779 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		751130F41B09C14D0086E779 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Oskar Öberg (NH8C5B36VT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/flic-boilerplate/libs",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREFIX_HEADER = "flic-boilerplate/other/flic-boilerplate.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/flic-boilerplate/other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/flic-boilerplate-dgyhtnrlojzuhbaeoagobwgxxuzn/Build/Products/Debug-iphoneos",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		751130F51B09C14D0086E779 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Oskar Öberg (NH8C5B36VT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/flic-boilerplate/libs",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREFIX_HEADER = "flic-boilerplate/other/flic-boilerplate.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/flic-boilerplate/other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/flic-boilerplate-dgyhtnrlojzuhbaeoagobwgxxuzn/Build/Products/Debug-iphoneos",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		751130F71B09C14D0086E779 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "flic-boilerplateTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/flic-boilerplate.app/flic-boilerplate";
+			};
+			name = Debug;
+		};
+		751130F81B09C14D0086E779 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "flic-boilerplateTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/flic-boilerplate.app/flic-boilerplate";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		751130CB1B09C14D0086E779 /* Build configuration list for PBXProject "flic-boilerplate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				751130F11B09C14D0086E779 /* Debug */,
+				751130F21B09C14D0086E779 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		751130F31B09C14D0086E779 /* Build configuration list for PBXNativeTarget "flic-boilerplate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				751130F41B09C14D0086E779 /* Debug */,
+				751130F51B09C14D0086E779 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		751130F61B09C14D0086E779 /* Build configuration list for PBXNativeTarget "flic-boilerplateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				751130F71B09C14D0086E779 /* Debug */,
+				751130F81B09C14D0086E779 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 751130C81B09C14D0086E779 /* Project object */;
+}

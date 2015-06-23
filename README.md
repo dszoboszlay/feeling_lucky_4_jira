@@ -43,8 +43,16 @@ The solution consists of the following components:
 
   Of course the backend can be used with different frontends too.
 
-This repository contains the backend code only. It is a standard
-[Chicago Boss](http://chicagoboss.org/) project.
+This repository contains the frontend and backend code as well. The
+former is an XCode project, the latter is a standard [Chicago
+Boss](http://chicagoboss.org/) project (with a `Makefile`).
+
+## Frontend documentation
+
+You probably want to start by looking at KLCViewController.m
+
+You can find the documentation here:
+https://developers.flic.io/documentation
 
 ## Keeping track of issues
 
