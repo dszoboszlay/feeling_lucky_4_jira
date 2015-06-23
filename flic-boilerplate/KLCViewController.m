@@ -35,11 +35,7 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	
-	// to make sure you won't steal eachothers buttons, you need to enter the ID of the button here
-	// the ID can be found on the back of the Flic
-	self.allowedButtons = @[@"ARcA"];
-	
+		
 	// this is to limit the scanning to buttons that are somewhat close to you
 	// 0 is closest -100 is farthest
 	// once the button is connected, this will not affect range at all
@@ -81,11 +77,22 @@
 	}];
 }
 
+- (IBAction)getNewIssue;
+{
+	[AppDelegate getNewIssueWithCompletionHandler:^(NSError *error) {
+		
+	}];
+}
+
 #pragma mark - SCLFlicButtonDelegate
 
 - (void)flicButton:(SCLFlicButton *)button didReceiveButtonClick:(BOOL)queued age:(NSInteger)age;
 {
-	// you probably want to start here!
+	if(age > 2) return;
+	[AppDelegate getNewIssueWithCompletionHandler:^(NSError *error)
+	{
+		
+	}];
 }
 
 - (void)flicButton:(SCLFlicButton *)button didReceiveButtonDown:(BOOL)queued age:(NSInteger)age;
@@ -109,12 +116,16 @@
 
 - (void)flicButton:(SCLFlicButton *)button didReceiveButtonDoubleClick:(BOOL)queued age:(NSInteger)age;
 {
-	
+
+	[AppDelegate completeIssue:nil completionHandler:^(Issue *issue, NSTimeInterval completionTime, NSError *error) {
+		
+	}];
 }
 
 - (void)flicButton:(SCLFlicButton *)button didReceiveButtonHold:(BOOL)queued age:(NSInteger)age;
 {
-	
+	[AppDelegate rejectIssue:nil completionHandler:^(NSError *error) {
+	}];
 }
 
 @end

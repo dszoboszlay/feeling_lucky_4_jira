@@ -2,6 +2,7 @@
 #import "KLCAppDelegate.h"
 
 #define AppDelegate ((KLCAppDelegate*)[[UIApplication sharedApplication] delegate])
+#define NOTIFICATION_ISSUES_UPDATED @"NOTIFICATION_ISSUES_UPDATED"
 
 static NSString * const SCLErrorDomain = @"com.shortcutlabs.fliclib";
 

@@ -23,6 +23,12 @@
 		754ADBFF1B0C95A00091C90A /* FlicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 754ADBFE1B0C95A00091C90A /* FlicTableViewCell.m */; };
 		754ADC021B0CD2F10091C90A /* KLCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754ADC011B0CD2F10091C90A /* KLCViewController.m */; };
 		754ADC051B0CD7A10091C90A /* SKBounceAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 754ADC041B0CD7A10091C90A /* SKBounceAnimation.m */; };
+		75BC43F21B0E0DDB0031FF9E /* FLCIssuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BC43F11B0E0DDB0031FF9E /* FLCIssuesViewController.m */; };
+		75BC43F51B0E0E1F0031FF9E /* KLCIssueTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BC43F41B0E0E1F0031FF9E /* KLCIssueTableViewCell.m */; };
+		75BC43F81B0E12E20031FF9E /* Issue.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BC43F71B0E12E20031FF9E /* Issue.m */; };
+		75D7104E1B0DF41E0059A01B /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D7104C1B0DF41E0059A01B /* UIAlertView+Blocks.m */; };
+		75D710531B0DF43F0059A01B /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D7104F1B0DF43F0059A01B /* UIActionSheet+Blocks.m */; };
+		75D710541B0DF43F0059A01B /* RIButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D710511B0DF43F0059A01B /* RIButtonItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +84,18 @@
 		754ADC011B0CD2F10091C90A /* KLCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCViewController.m; sourceTree = "<group>"; };
 		754ADC031B0CD7A10091C90A /* SKBounceAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKBounceAnimation.h; sourceTree = "<group>"; };
 		754ADC041B0CD7A10091C90A /* SKBounceAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKBounceAnimation.m; sourceTree = "<group>"; };
+		75BC43F01B0E0DDB0031FF9E /* FLCIssuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLCIssuesViewController.h; sourceTree = "<group>"; };
+		75BC43F11B0E0DDB0031FF9E /* FLCIssuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLCIssuesViewController.m; sourceTree = "<group>"; };
+		75BC43F31B0E0E1F0031FF9E /* KLCIssueTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCIssueTableViewCell.h; sourceTree = "<group>"; };
+		75BC43F41B0E0E1F0031FF9E /* KLCIssueTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCIssueTableViewCell.m; sourceTree = "<group>"; };
+		75BC43F61B0E12E20031FF9E /* Issue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Issue.h; sourceTree = "<group>"; };
+		75BC43F71B0E12E20031FF9E /* Issue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Issue.m; sourceTree = "<group>"; };
+		75D7104C1B0DF41E0059A01B /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		75D7104D1B0DF41E0059A01B /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		75D7104F1B0DF43F0059A01B /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
+		75D710501B0DF43F0059A01B /* UIActionSheet+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks.h"; sourceTree = "<group>"; };
+		75D710511B0DF43F0059A01B /* RIButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIButtonItem.m; sourceTree = "<group>"; };
+		75D710521B0DF43F0059A01B /* RIButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIButtonItem.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,11 +141,17 @@
 			children = (
 				754ADC001B0CD2F10091C90A /* KLCViewController.h */,
 				754ADC011B0CD2F10091C90A /* KLCViewController.m */,
+				75BC43F01B0E0DDB0031FF9E /* FLCIssuesViewController.h */,
+				75BC43F11B0E0DDB0031FF9E /* FLCIssuesViewController.m */,
+				75BC43F31B0E0E1F0031FF9E /* KLCIssueTableViewCell.h */,
+				75BC43F41B0E0E1F0031FF9E /* KLCIssueTableViewCell.m */,
 				754823B11B09FAEB00F46B75 /* other */,
 				751131171B09EB0E0086E779 /* ui */,
 				751131101B09EACB0086E779 /* classes */,
 				751130FD1B09D2740086E779 /* libs */,
 				751130E01B09C14D0086E779 /* Images.xcassets */,
+				75BC43F61B0E12E20031FF9E /* Issue.h */,
+				75BC43F71B0E12E20031FF9E /* Issue.m */,
 			);
 			path = "flic-boilerplate";
 			sourceTree = "<group>";
@@ -160,6 +184,12 @@
 		751131101B09EACB0086E779 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				75D7104F1B0DF43F0059A01B /* UIActionSheet+Blocks.m */,
+				75D710501B0DF43F0059A01B /* UIActionSheet+Blocks.h */,
+				75D710511B0DF43F0059A01B /* RIButtonItem.m */,
+				75D710521B0DF43F0059A01B /* RIButtonItem.h */,
+				75D7104C1B0DF41E0059A01B /* UIAlertView+Blocks.m */,
+				75D7104D1B0DF41E0059A01B /* UIAlertView+Blocks.h */,
 				754ADC031B0CD7A10091C90A /* SKBounceAnimation.h */,
 				754ADC041B0CD7A10091C90A /* SKBounceAnimation.m */,
 				754823C61B0A05E600F46B75 /* FLCPopOverViewController.h */,
@@ -308,13 +338,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75BC43F51B0E0E1F0031FF9E /* KLCIssueTableViewCell.m in Sources */,
 				751131161B09EB050086E779 /* KLCViewControllerBase.m in Sources */,
 				754823CA1B0A05E600F46B75 /* FLCPopOverViewController.m in Sources */,
 				754ADC051B0CD7A10091C90A /* SKBounceAnimation.m in Sources */,
+				75BC43F21B0E0DDB0031FF9E /* FLCIssuesViewController.m in Sources */,
+				75D710541B0DF43F0059A01B /* RIButtonItem.m in Sources */,
 				754ADBFF1B0C95A00091C90A /* FlicTableViewCell.m in Sources */,
 				754823BC1B09FE9500F46B75 /* SCLButtonScanner.m in Sources */,
 				754823B61B09FAF700F46B75 /* main.m in Sources */,
 				754823CB1B0A05E600F46B75 /* SCLScannerPopOverViewController.m in Sources */,
+				75D710531B0DF43F0059A01B /* UIActionSheet+Blocks.m in Sources */,
+				75D7104E1B0DF41E0059A01B /* UIAlertView+Blocks.m in Sources */,
+				75BC43F81B0E12E20031FF9E /* Issue.m in Sources */,
 				751131151B09EB050086E779 /* KLCAppDelegate.m in Sources */,
 				754ADC021B0CD2F10091C90A /* KLCViewController.m in Sources */,
 			);
@@ -427,19 +463,27 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Oskar Öberg (NH8C5B36VT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Oskar Öberg (NH8C5B36VT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/flic-boilerplate/libs",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PREFIX_HEADER = "flic-boilerplate/other/flic-boilerplate.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/flic-boilerplate/other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/flic-boilerplate-dgyhtnrlojzuhbaeoagobwgxxuzn/Build/Products/Debug-iphoneos",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f3c63eb7-4621-4c63-a9e7-21dece5daeb7";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -449,18 +493,26 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Oskar Öberg (NH8C5B36VT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Oskar Öberg (NH8C5B36VT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/flic-boilerplate/libs",
 					"$(PROJECT_DIR)",
 				);
 				GCC_PREFIX_HEADER = "flic-boilerplate/other/flic-boilerplate.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/flic-boilerplate/other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/flic-boilerplate-dgyhtnrlojzuhbaeoagobwgxxuzn/Build/Products/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f3c63eb7-4621-4c63-a9e7-21dece5daeb7";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
